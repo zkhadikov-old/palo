@@ -1,4 +1,5 @@
-palo
+PALO - OpenSource MOLAP (www.jedox.com)
 ====
 
-PALO - OpenSource MOLAP (www.jedox.com)
+Source code: http://sourceforge.net/p/palo/code/HEAD/tree/molap/server/5.0/
+s
