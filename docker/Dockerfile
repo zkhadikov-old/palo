@@ -16,9 +16,9 @@ cp -rdu /tmp/palo/build/usr/* /usr/ && \
 cp -rdu /tmp/palo/Api/ / && \
 rm -rf /tmp/palo && \
 mkdir -p /Data && \
-echo -e "verbose info \nhttp \"\" 7777 \nlog /var/log/olap_server.log \n  \
-splash-limit 1000 500 100 \ngoalseek-limit 1000 \ngoalseek-timeout 10000 \n \
-cache-barrier 1000000 \nextension /usr/lib64">/Data/palo.ini && \
+echo -e "verbose info \nhttp \"\" 7777 \nadmin \"\" 7778 \
+\nsplash-limit 1000 500 100 \ngoalseek-limit 1000 \ngoalseek-timeout 10000 \
+\ncache-barrier 1000000 \nextension /usr/lib64">/Data/palo.ini && \
 yum remove -y subversion cmake gcc gcc-c++ make libicu-devel openssl-devel \ 
 libudev-devel gperftools-devel boost-devel zlib-devel \
 apr apr-util cpp glibc-devel glibc-headers gnutls kernel-headers \
@@ -43,5 +43,5 @@ yum autoremove -y && \
 yum clean all && \
 palo -V
 
-EXPOSE 7777
-CMD palo
+EXPOSE 7777 7778
+ENTRYPOINT ["palo"]
