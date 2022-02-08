@@ -36,6 +36,9 @@ boost-serialization boost-signals boost-system boost-test boost-thread \
 boost-timer boost-wave gperftools-libs keyutils-libs-devel krb5-devel \
 libcom_err-devel libicu libselinux-devel libsepol-devel libunwind \
 libverto-devel pcre-devel && \
+cp -rdu /tmp/palo/build/usr/* /usr/ && \
+cp -rdu /tmp/palo/Api/ / && \
+rm -rf /tmp/palo && \
 yum autoremove -y && \
 yum clean all && \
 yum install -y boost-thread boost-regex gperftools-libs && \
